@@ -12,6 +12,7 @@ jobs:
     name: ${env_var}
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - name: Ejecucion de pruebas de clidad
         id: validate_pull_request
         run: |
@@ -37,7 +38,7 @@ jobs:
           echo "Build fallida. Impidiendo Pull Request"
           exit 1
 
-      - uses: actions/checkout@master
+      
       - name: creacion de archivo de credenciales
         uses: actions/setup-python@v2
         with:
