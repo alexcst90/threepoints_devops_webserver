@@ -19,7 +19,8 @@ jobs:
             echo "el archivo existe"
             echo "::set-output name=allow_pull::true"
           else
-            echo pwd
+            pwd
+            ls
             echo "no existe archivo"
             echo "::set-output name=allow_pull::false"
           fi
