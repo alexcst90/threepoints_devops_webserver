@@ -15,7 +15,9 @@ jobs:
       - name: Ejecucion de pruebas de clidad
         id: validate_pull_request
         run: |
-          if [ -f /threepoints_devops_webserver/allow_pull_request.txt ]; then
+          cd /home
+          pwd
+          if [ -f allow_pull_request.txt ]; then
             echo "el archivo existe"
             echo "::set-output name=allow_pull::true"
           else
